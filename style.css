@@ -1,144 +1,107 @@
+/* =========================================
+   CONIX Website - Main Stylesheet
+========================================= */
+
 :root {
-    --primary-color: #003366;
-    --accent-color: #00a8e8;
-    --text-color: #333;
-    --light-bg: #f8fafc;
+    --primary-color: #003366; /* 코닉스 딥 블루 */
+    --accent-color: #00a8e8;  /* 강조 스카이 블루 */
+    --text-color: #333333;    /* 기본 텍스트 짙은 회색 */
+    --light-bg: #f8fafc;      /* 연한 배경색 */
     --white: #ffffff;
 }
 
+/* --- 1. 초기화 및 기본 폰트 --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Noto Sans KR', sans-serif; color: var(--text-color); line-height: 1.6; background-color: var(--white); }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-nav { background: var(--white); height: 80px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-.logo { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--primary-color); letter-spacing: -1px; }
-.nav-links { list-style: none; display: flex; }
-.nav-links li { margin-left: 35px; }
-.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 1rem; transition: 0.3s; }
-.nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
-
-.hero { background: linear-gradient(rgba(0, 34, 68, 0.8), rgba(0, 34, 68, 0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80') center/cover; height: 80vh; display: flex; align-items: center; color: var(--white); text-align: center; }
-.hero h2 { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--accent-color); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-.hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 25px; word-break: keep-all; }
-.hero p { font-size: 1.2rem; font-weight: 300; max-width: 700px; margin: 0 auto 40px; opacity: 0.9; word-break: keep-all; }
-
-.btn { display: inline-block; padding: 14px 35px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; cursor: pointer; border: none; }
-.btn-primary { background-color: var(--accent-color); color: var(--white); }
-
-.preview-section { padding: 100px 0; background-color: var(--light-bg); }
-.preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.preview-card { background: var(--white); padding: 45px 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
-.preview-card:hover { transform: translateY(-10px); }
-.preview-card .icon { font-size: 3rem; margin-bottom: 20px; }
-.preview-card h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.4rem; }
-.preview-card p { font-size: 0.95rem; color: #666; margin-bottom: 25px; word-break: keep-all; }
-.link-btn { color: var(--accent-color); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
-
-footer { background-color: #111; color: var(--white); padding: 80px 0 40px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; margin-bottom: 40px; }
-.footer-about .logo { color: var(--white); margin-bottom: 15px; }
-.footer-about p { opacity: 0.6; font-size: 0.9rem; max-width: 400px; }
-.footer-contact h4 { margin-bottom: 20px; font-size: 1.1rem; border-left: 3px solid var(--accent-color); padding-left: 10px; }
-.footer-contact p { opacity: 0.8; font-size: 0.9rem; margin-bottom: 10px; }
-.copyright { border-top: 1px solid #333; padding-top: 30px; text-align: center; font-size: 0.85rem; opacity: 0.4; }
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.2rem; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
+body { 
+    font-family: 'Noto Sans KR', sans-serif; 
+    color: var(--text-color); 
+    line-height: 1.6; 
+    background-color: var(--white); 
 }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 80px 0; }
 
-/* style.css 맨 아래 추가 */
-
-/* --- 글로벌 스타일 보강 --- */
+/* --- 2. 글로벌 타이포그래피 (글씨 기본 규칙) --- */
 h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; font-weight: 800; }
 h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 25px; margin-top: 50px; font-weight: 700; }
 h3 { font-size: 1.4rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 600; }
 p { font-size: 1.05rem; color: #555; margin-bottom: 15px; word-break: keep-all; }
 
-/* 섹션 패딩 (본문 가독성 확보) */
-.section-padding { padding: 80px 0; }
+/* 버튼 공통 디자인 */
+.btn { display: inline-block; padding: 14px 35px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; cursor: pointer; border: none; }
+.btn-primary { background-color: var(--accent-color); color: var(--white); }
+.btn-primary:hover { background-color: #008bc0; }
 
-/* --- [헤더/로고 정렬 해결] --- */
-nav { background: var(--white); height: 100px; /* 높이를 조금 키워 여유를 줍니다. */ display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
 
-/* 로고와 메뉴를 양끝으로 배치하고 세로 중앙 정렬 */
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+/* --- 3. 헤더 및 네비게이션 (상단 메뉴) --- */
+nav { 
+    background: var(--white); 
+    height: 100px; 
+    display: flex; 
+    align-items: center; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }
+.nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
-/* 그래픽+텍스트 로고 블록: 세로 중앙 정렬 및 간격 조절 */
-.logo-container {
-    display: flex;
-    align-items: center; /* 그래픽과 텍스트의 세로 중앙을 맞춥니다. */
-    text-decoration: none; /* 밑줄 제거 */
-    gap: 10px; /* 그래픽과 텍스트 사이 간격 */
-}
+/* 로고 영역 (글씨 밑줄 제거 및 깔끔한 정렬) */
+.logo-container { display: flex; align-items: center; text-decoration: none; gap: 20px; border: none; outline: none; }
+.logo-img { height: 65px; width: auto; object-fit: contain; }
+/* 만약 로고 텍스트를 사용할 경우를 대비한 스타일 */
+.logo-text { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--primary-color); letter-spacing: -1.5px; } 
 
-.logo-img {
-    height: 70px; /* 로고 그래픽 크기 조절 */
-    width: auto;
-}
-
-.logo-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--primary-color); /* 딥 블루 */
-    letter-spacing: -1.5px;
-}
-
-/* 메뉴 스타일: 로고와 정렬 */
+/* 메뉴 링크 */
+.nav-links { list-style: none; display: flex; }
 .nav-links li { margin-left: 30px; }
-.nav-links a { font-size: 1.1rem; font-weight: 500; transition: color 0.3s; }
+.nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 1.1rem; transition: color 0.3s; }
 .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
 
 
-/* --- [본문 가독성 해결 (Mission Box)] --- */
+/* --- 4. 메인 페이지 전용 디자인 --- */
+/* 히어로 섹션 (어두운 배경이므로 글씨를 강제로 흰색 처리) */
+.hero { background: linear-gradient(rgba(0, 34, 68, 0.8), rgba(0, 34, 68, 0.8)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80') center/cover; height: 80vh; display: flex; align-items: center; text-align: center; }
+.hero h1 { font-size: 3.5rem; color: #ffffff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.hero h2 { font-size: 1.2rem; color: var(--accent-color); margin-top: 0; letter-spacing: 2px; }
+.hero p { color: #ffffff; font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
 
-/* 강조하고 싶은 비전/미션을 위한 박스 스타일 */
-.mission-box {
-    background: var(--light-bg); /* 연한 그레이 배경 */
-    padding: 40px;
-    border-radius: 15px;
-    border-left: 5px solid var(--accent-color); /* 왼쪽에 강조 선 추가 */
-    margin-top: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
+/* 프리뷰 카드 섹션 */
+.preview-section { padding: 100px 0; background-color: var(--light-bg); }
+.preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.preview-card { background: var(--white); padding: 45px 35px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s; }
+.preview-card:hover { transform: translateY(-10px); }
+.preview-card .icon { font-size: 3rem; margin-bottom: 20px; }
+.preview-card h3 { color: var(--primary-color); margin-top: 0; margin-bottom: 15px; font-size: 1.4rem; }
+.preview-card p { font-size: 0.95rem; color: #666; margin-bottom: 25px; }
+.link-btn { color: var(--accent-color); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
 
-.mission-box h3 {
-    margin-top: 0; /* 박스 안의 제목은 여백 제거 */
-    margin-bottom: 10px;
-}
 
-.mission-box p {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0; /* 박스 안의 텍스트는 여백 제거 */
-    color: var(--primary-color); /* 딥 블루 */
-}
+/* --- 5. 서브 페이지 전용 디자인 --- */
+/* 서브페이지 상단 타이틀 (파란 배경 + 흰 글씨 고정) */
+.sub-page-header { background-color: var(--primary-color); padding: 60px 0; text-align: center; }
+.sub-page-header h1 { color: #ffffff; margin-bottom: 10px; margin-top: 0; }
+.sub-page-header p { color: rgba(255, 255, 255, 0.8); margin-bottom: 0; }
 
-/* --- [어두운 배경 글씨색 수정 (히어로 & 푸터)] --- */
+/* 핵심 가치 박스 (About 등) */
+.mission-box { background: var(--light-bg); padding: 40px; border-radius: 15px; border-left: 5px solid var(--accent-color); margin-top: 30px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.mission-box h3 { margin-top: 0; margin-bottom: 10px; color: var(--primary-color); }
+.mission-box p { font-size: 1.2rem; font-weight: 700; margin-bottom: 0; color: var(--primary-color); }
 
-/* 1. 메인 화면(Hero) 글씨를 흰색으로 변경하고 그림자 추가 */
-.hero h1, 
-.hero h2, 
-.hero p {
-    color: #ffffff; 
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* 사진 위에서도 글씨가 또렷하게 보이도록 그림자 추가 */
-}
 
-/* 2. 하단 푸터(Footer) 글씨를 밝은 색으로 변경 */
-footer p, 
-.copyright {
-    color: rgba(255, 255, 255, 0.7); /* 눈이 편안한 밝은 회색 */
-}
+/* --- 6. 푸터 (하단 영역) --- */
+/* 검은 배경이므로 텍스트를 모두 밝은 회색/흰색으로 고정 */
+footer { background-color: #111; padding: 80px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 50px; margin-bottom: 40px; }
+.footer-about .logo { color: #ffffff; margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; }
+.footer-about p, .footer-contact p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; }
+.footer-contact h4 { color: #ffffff; margin-top: 0; margin-bottom: 20px; font-size: 1.1rem; border-left: 3px solid var(--accent-color); padding-left: 10px; }
+.copyright { border-top: 1px solid #333; padding-top: 30px; text-align: center; font-size: 0.85rem; color: rgba(255, 255, 255, 0.4); }
 
-footer h4 {
-    color: #ffffff; /* Contact Us 소제목은 완전 흰색으로 강조 */
+
+/* --- 7. 모바일 반응형 --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; /* 모바일에서는 메뉴 숨김 처리 (추후 햄버거 메뉴 추가 가능) */ }
 }
