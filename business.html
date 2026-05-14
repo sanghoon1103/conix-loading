@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business | CONIX - 사업 영역</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Business 페이지 전용 스타일 */
+        .sub-page-header { background: var(--primary-color); padding: 60px 0; color: white; text-align: center; }
+        .business-section { padding: 80px 0; }
+        
+        .business-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 40px; }
+        .business-card { background: var(--white); border: 1px solid #eee; border-radius: 15px; overflow: hidden; transition: 0.3s; }
+        .business-card:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.1); transform: translateY(-5px); }
+        .card-header { background: var(--light-bg); padding: 25px; border-bottom: 1px solid #eee; }
+        .card-header h3 { color: var(--primary-color); font-size: 1.3rem; }
+        .card-body { padding: 30px; }
+        .card-body ul { list-style: none; }
+        .card-body li { margin-bottom: 12px; padding-left: 20px; position: relative; font-size: 0.95rem; color: #555; }
+        .card-body li::before { content: '•'; color: var(--accent-color); position: absolute; left: 0; font-weight: bold; }
+
+        .industry-section { background-color: var(--primary-color); color: white; padding: 80px 0; text-align: center; }
+        .industry-flex { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; margin-top: 40px; }
+        .industry-item { flex: 1; min-width: 150px; max-width: 200px; }
+        .industry-item h4 { color: var(--accent-color); margin-bottom: 10px; font-size: 1.2rem; }
+        .industry-item p { font-size: 0.85rem; opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            .business-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">CONIX</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="business.html" class="active">Business</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sub-page-header">
+        <div class="container">
+            <h1>Business Areas</h1>
+            <p>CIX 기술을 바탕으로 4개의 핵심 사업 영역에서 혁신을 창출합니다.</p>
+        </div>
+    </div>
+
+    <section class="business-section">
+        <div class="container">
+            <div class="business-grid">
+                <div class="business-card">
+                    <div class="card-header">
+                        <h3>01. 전략 기획 및 컨설팅</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>감각 데이터 기반 농업 로드맵 구축 (스마트 농업 기업) [cite: 5, 61, 64]</li>
+                            <li>운동 피드백 시스템 기획 및 비즈니스 모델 개발 (스포츠 테크 기업) [cite: 5, 61, 67]</li>
+                            <li>촉각 데이터 연구 및 실험적 프로토타이핑 지원 (VR/AR 기술 기업) [cite: 5, 61, 70]</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="business-card">
+                    <div class="card-header">
+                        <h3>02. 연구 및 기술 실증</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>촉각 피드백을 활용한 VR 액세서리 연구 및 실증 [cite: 5, 61, 77]</li>
+                            <li>미각 AI를 활용한 맞춤형 레시피 추천 연구 (푸드테크 스타트업) [cite: 5, 61, 79]</li>
+                            <li>수면 및 명상을 위한 온도·촉각 피드백 웨어러블 연구 [cite: 5, 61, 81]</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="business-card">
+                    <div class="card-header">
+                        <h3>03. 기술 교육 및 트레이닝</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Contact Intelligence 개론 및 산업 적용 사례 교육 [cite: 5, 61, 86]</li>
+                            <li>촉각, 미각, 후각 데이터의 AI 분석 기법 교육 [cite: 5, 61, 88]</li>
+                            <li>R&D 기획, 연구 과제 도출 및 기술 로드맵 수립 실습 [cite: 5, 61, 92, 93]</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="business-card">
+                    <div class="card-header">
+                        <h3>04. 제품 및 서비스 개발</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>손목 착용형 촉각 피드백 웨어러블 디바이스 출시 [cite: 5, 61, 97]</li>
+                            <li>미각 AI 기반 맞춤형 푸드 매칭 서비스 개발 [cite: 5, 61, 99]</li>
+                            <li>감각 데이터 기반 환자 모니터링 시스템 구축 [cite: 5, 61, 101]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="industry-section">
+        <div class="container">
+            <h2>CIX for Your Industry</h2>
+            <p style="margin-top: 10px; opacity: 0.7;">각 산업군에 특화된 맞춤형 감각 인텔리전스 솔루션을 제공합니다.</p>
+            <div class="industry-flex">
+                <div class="industry-item">
+                    <h4>CIA</h4>
+                    <p>Agriculture<br>지능형 농업 솔루션 [cite: 4, 54]</p>
+                </div>
+                <div class="industry-item">
+                    <h4>CIM</h4>
+                    <p>Manufacture<br>스마트 제조 및 로봇 [cite: 4, 56]</p>
+                </div>
+                <div class="industry-item">
+                    <h4>CIS</h4>
+                    <p>Sports/Health<br>맞춤형 트레이닝 및 웰니스 [cite: 6, 123, 124]</p>
+                </div>
+                <div class="industry-item">
+                    <h4>CIF</h4>
+                    <p>Foodtech<br>미각 AI 및 맞춤 식품 [cite: 6, 127, 128]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright" style="border: none; padding: 0; opacity: 0.6;">
+                &copy; 2026 CONIX. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

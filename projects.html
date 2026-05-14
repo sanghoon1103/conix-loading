@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | CONIX - 실증 사례 및 파트너</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Projects 페이지 전용 스타일 */
+        .sub-page-header { background: var(--primary-color); padding: 60px 0; color: white; text-align: center; }
+        .project-section { padding: 80px 0; }
+        
+        /* 사례 카드 레이아웃 */
+        .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; }
+        .case-item { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .case-image { height: 200px; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; }
+        .case-content { padding: 30px; }
+        .case-tag { background: var(--accent-color); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 15px; display: inline-block; }
+        .case-content h3 { margin-bottom: 15px; color: var(--primary-color); }
+        .case-content p { font-size: 0.95rem; color: #666; margin-bottom: 15px; }
+
+        /* 파트너 섹션 */
+        .partner-section { background: var(--light-bg); padding: 80px 0; text-align: center; }
+        .partner-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px; }
+        .partner-tag { background: white; padding: 10px 25px; border-radius: 50px; border: 1px solid #ddd; font-weight: 500; color: var(--primary-color); font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .case-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">CONIX</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sub-page-header">
+        <div class="container">
+            <h1>Industrial Applications</h1>
+            <p>다양한 산업 분야에서 실현되고 있는 CIX 기술의 혁신 사례입니다.</p>
+        </div>
+    </div>
+
+    <section class="project-section">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary-color);">Case Studies</h2>
+            <div class="case-grid">
+                <div class="case-item">
+                    <div class="case-image">[HealthCare UI/Device Image]</div>
+                    <div class="case-content">
+                        <span class="case-tag">Healthcare & Sports</span>
+                        <h3>심리 안정 웨어러블 시스템</h3>
+                        <p>심박수, 체온, 피부 반응 데이터를 분석하여 스트레스 상태를 감지하고, 촉각 및 온도 피드백을 통해 심리적 안정을 유도하는 맞춤형 솔루션입니다. [cite: 105, 106, 107]</p>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-image">[Robot Collaboration Image]</div>
+                    <div class="case-content">
+                        <span class="case-tag">Smart Manufacture</span>
+                        <h3>인간-기계 협업 로봇 제어</h3>
+                        <p>촉각 피드백을 활용하여 작업자와 로봇 간의 직관적인 협업 환경을 구축합니다. 정밀한 로봇 제어 시스템을 통해 작업 효율을 극대화합니다. [cite: 112, 113]</p>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-image">[Smart Farm Interface Image]</div>
+                    <div class="case-content">
+                        <span class="case-tag">Agriculture</span>
+                        <h3>지능형 농업 안전 관리 플랫폼</h3>
+                        <p>감각 데이터를 디지털화하여 농업 현장의 위험 요소를 실시간으로 모니터링하고 분석합니다. 농가 수익 증대와 자원 절약을 지향합니다. [cite: 54, 55, 198]</p>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <div class="case-image">[Taste AI Analysis Image]</div>
+                    <div class="case-content">
+                        <span class="case-tag">Foodtech & Taste AI</span>
+                        <h3>맞춤형 미각 분석 솔루션</h3>
+                        <p>사용자의 미각 데이터를 분석하여 최적의 향미 조합을 AI로 추천합니다. 전통주(Sool)의 과학적 표준화 및 개인별 메뉴 추천 엔진을 개발합니다. [cite: 136, 137, 139]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partner-section">
+        <div class="container">
+            <h2>Major Partners</h2>
+            <p style="margin-top: 10px; opacity: 0.7;">CONIX는 혁신을 위해 국내외 주요 기관 및 기업들과 협력하고 있습니다. [cite: 194]</p>
+            <div class="partner-list">
+                <span class="partner-tag">농촌진흥청 [cite: 198]</span>
+                <span class="partner-tag">국립농업과학원 [cite: 198]</span>
+                <span class="partner-tag">한국로봇산업진흥원 [cite: 199]</span>
+                <span class="partner-tag">삼성전자 [cite: 202]</span>
+                <span class="partner-tag">현대자동차 [cite: 202]</span>
+                <span class="partner-tag">포스코 [cite: 202]</span>
+                <span class="partner-tag">SK C&C [cite: 202]</span>
+                <span class="partner-tag">HUAWEI [cite: 204]</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright" style="border: none; padding: 0; opacity: 0.6;">
+                &copy; 2026 CONIX. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
