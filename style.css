@@ -48,30 +48,77 @@ footer { background-color: #111; color: var(--white); padding: 80px 0 40px; }
     .footer-grid { grid-template-columns: 1fr; }
     .nav-links { display: none; }
 }
-/* 로고 이미지 스타일 */
-.logo-link {
+
+/* style.css 맨 아래 추가 */
+
+/* --- 글로벌 스타일 보강 --- */
+h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; font-weight: 800; }
+h2 { font-size: 2rem; color: var(--primary-color); margin-bottom: 25px; margin-top: 50px; font-weight: 700; }
+h3 { font-size: 1.4rem; color: var(--primary-color); margin-bottom: 15px; font-weight: 600; }
+p { font-size: 1.05rem; color: #555; margin-bottom: 15px; word-break: keep-all; }
+
+/* 섹션 패딩 (본문 가독성 확보) */
+.section-padding { padding: 80px 0; }
+
+/* --- [헤더/로고 정렬 해결] --- */
+nav { background: var(--white); height: 100px; /* 높이를 조금 키워 여유를 줍니다. */ display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+/* 로고와 메뉴를 양끝으로 배치하고 세로 중앙 정렬 */
+.nav-container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-decoration: none;
+    width: 100%;
 }
 
-.logo-img {
-    height: 40px; /* 상단 메뉴바에 맞게 로고 크기 조절 */
-    width: auto;
-}
-
-/* 로고 컨테이너 (보라색 밑줄 등 기본 링크 스타일 완벽 제거) */
+/* 그래픽+텍스트 로고 블록: 세로 중앙 정렬 및 간격 조절 */
 .logo-container {
     display: flex;
-    align-items: center;
-    text-decoration: none; 
-    border: none;
-    outline: none;
+    align-items: center; /* 그래픽과 텍스트의 세로 중앙을 맞춥니다. */
+    text-decoration: none; /* 밑줄 제거 */
+    gap: 10px; /* 그래픽과 텍스트 사이 간격 */
 }
 
-/* 로고 이미지 크기 (상단바에 꽉 차게 예쁘게 보이도록 조절) */
 .logo-img {
-    height: 65px; /* 로고가 더 커지길 원하시면 이 숫자를 70~80으로 늘려보세요 */
+    height: 70px; /* 로고 그래픽 크기 조절 */
     width: auto;
-    object-fit: contain;
+}
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color); /* 딥 블루 */
+    letter-spacing: -1.5px;
+}
+
+/* 메뉴 스타일: 로고와 정렬 */
+.nav-links li { margin-left: 30px; }
+.nav-links a { font-size: 1.1rem; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+
+/* --- [본문 가독성 해결 (Mission Box)] --- */
+
+/* 강조하고 싶은 비전/미션을 위한 박스 스타일 */
+.mission-box {
+    background: var(--light-bg); /* 연한 그레이 배경 */
+    padding: 40px;
+    border-radius: 15px;
+    border-left: 5px solid var(--accent-color); /* 왼쪽에 강조 선 추가 */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.mission-box h3 {
+    margin-top: 0; /* 박스 안의 제목은 여백 제거 */
+    margin-bottom: 10px;
+}
+
+.mission-box p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0; /* 박스 안의 텍스트는 여백 제거 */
+    color: var(--primary-color); /* 딥 블루 */
 }
