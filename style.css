@@ -59,3 +59,26 @@ footer { background-color: #111; color: var(--white); padding: 80px 0 40px; }
     height: 40px; /* 상단 메뉴바에 맞게 로고 크기 조절 */
     width: auto;
 }
+
+/* 로고 컨테이너: 이미지와 텍스트를 가로로 중앙 정렬 */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    gap: 15px; /* 로고와 텍스트 사이 간격 */
+}
+
+/* 로고 이미지 스타일: 높이를 키워 크기를 조절 */
+.logo-img {
+    height: 60px; /* 기존 50px에서 60px로 키웠습니다. 더 키우려면 숫자를 높이세요. */
+    width: auto;  /* 비율 유지 */
+}
+
+/* 로고 텍스트 스타일: 폰트와 크기 설정 */
+.logo-text {
+    font-family: 'Montserrat', sans-serif; /* Montserrat 폰트 사용 */
+    font-size: 2rem; /* 텍스트 크기 */
+    font-weight: 800; /* 텍스트 굵기 */
+    color: var(--primary-color); /* 딥 블루 색상 */
+    letter-spacing: -1.5px; /* 자간 조절 */
+}
